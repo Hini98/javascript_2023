@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>obj</title>
+</head>
+<body>
+	<div id = "digClock"></div>
+	
+	<script>
+		function digClock() {
+			var today=new Date();
+			
+			var day=today.getMonth()+1+"월"+toDate()+"일";
+			var time=today.getHours() +"시"+today.getMinutes()+"분"+today.getSeconds()+"초";
+			
+			document.getElementById("digClock").innerHTML=day+time;
+			setTimout('digClock()',1000);
+		}
+		
+		digClock();
+	</script>
+</body>
+</html>
+
+<!--testContent: 웹문서 안에서 아이드를 찾아서 변수방에 부여한 후 변수의 내용을 출력
+단 선언된 아이디 순서대로 호출됨-->

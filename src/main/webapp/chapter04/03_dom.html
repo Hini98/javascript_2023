@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+	<script>
+		function addElment(){
+			var newParagraph = document.createElement('p');
+			newParagraph.textContent="this id a new paragraph";
+			var myDiv = document.getElementById("myDiv");
+			myDiv.appendChild(newParagraph);
+		}
+		
+	</script>
+</head>
+<body>
+	<div id="myDiv">Hellow World</div>
+	<button onclick="addElment()">Add Element</button>
+	
+		
+</body>
+</html>

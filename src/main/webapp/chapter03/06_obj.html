@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta charset="UTF-8">
+   <title>object</title>
+</head>
+
+<body>
+
+   <p>[Hong Car]</p>
+   <p id="Hong1"></p>
+   <p id="Hong2"></p>
+   <p id="Hong3"></p>
+   <p>[Kim Car]</p>
+   <p id="data1"></p>
+   <p id="data2"></p>
+   <p id="data3"></p>
+   <p id="data4"></p>
+
+   <script>
+      function Car(name, color, speed) {
+         this.name = name;
+         this.color = color;
+         this.speed = speed;
+
+         this.speedUp = function (a) {
+            var sp = this.speed + a;
+            if (sp >= 180) {
+               sp = 50;
+               return sp;
+            } else {
+               return sp;
+            }
+         };
+
+         this.speedDown = function (a) {
+            var sp = this.speed - a;
+            if (sp < 0) {
+               sp = 0;
+               return sp;
+            } else {
+               return sp;
+            }
+         };
+      }
+
+      var Hongcar = new Car('Sonata', 'blue', 100);
+      var Kimcar = new Car('Jeep', 'red', 120);
+      
+      //속성 추가 삭제
+      Kimcar.price = '4천만원';
+      delete Kimcar.color;
+
+      var hongcarname = document.getElementById("Hong1");
+      hongcarname.textContent = '자동차 이름 : ' + Hongcar.name;
+
+      var hongcarcolor = document.getElementById("Hong2");
+      hongcarcolor.textContent = '자동차 색상 : ' + Hongcar.color;
+
+      var hongspeed = document.getElementById("Hong3");
+      hongspeed.textContent = "속도 : " + Hongcar.speed;
+
+      var kimcarname = document.getElementById("data1");
+      kimcarname.textContent = '자동차 이름 : ' + Kimcar.name;
+
+      var kimcarcolor = document.getElementById("data2");
+      kimcarcolor.textContent = '자동차 색상 : ' + Kimcar.color;
+
+      var kimspeed = document.getElementById("data3");
+      kimspeed.textContent = "속도 : " + Kimcar.speed;
+      
+      var cprice = document.getElementById("data4");
+      cprice.textContent = "자동차 가격 : " + Kimcar.price;
+   </script>
+
+</body>
+
+</html>
+
+<!--testContent: 웹문서 안에서 아이드를 찾아서 변수방에 부여한 후 변수의 내용을 출력
+단 선언된 아이디 순서대로 호출됨-->

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>obj</title>
+</head>
+<body>
+	<div id = "digClock"></div>
+	
+	<script>
+		function add(){
+			var header=document.createElement('h3');//<h3>요소 생성
+			var textNode=document.createTextNode('내 이름은 장다빈입니다.');
+			
+			header.appendChild(textNode);	//<h3>내 이름은 장다빈입니다.</h3>
+			document.body.appendChild(header);
+		}
+		
+		digClock();
+	</script>
+	
+	<a href="#" onclick="add()">당신의 이름은?</a>
+</body>
+</html>
+
+<!--testContent: 웹문서 안에서 아이드를 찾아서 변수방에 부여한 후 변수의 내용을 출력
+단 선언된 아이디 순서대로 호출됨-->

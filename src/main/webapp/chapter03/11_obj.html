@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>obj</title>
+</head>
+<body>
+	<p id="d1"></p>
+    <p id="d2"></p>
+    <p id="d3"></p>
+    <p id="d4"></p>
+    <p id="d5"></p>
+    <p id="d6"></p>
+    <p id="d7"></p>
+    <p id="d8"></p>
+    <p id="d9"></p>
+	
+	<script>
+		var today=new Date();
+		document.getElementById("d0").innerHTML=today.toDateString();
+		
+		//toISOString: ISO를 확장시킨 형식. ISO 8601 문자열, 반환값이 24~27글자까지 가능
+		//(yyyy-MM-DDHH:mm:ss.sss)
+		document.getElementById("d1").innerHTML=today.toISOString();
+		
+		//UTC 형식 확장
+		document.getElementById("d2").innerHTML=today.toUTCString();
+		
+		//toJSON: Date객체를 문자열로
+		document.getElementById("d3").innerHTML=today.toJSON();  
+		
+		//toLocaleDateString: 오전, 오후에 시간 표시
+   		document.getElementById("d4").innerHTML=today.toLocaleDateString(); 
+   		
+   		//toLocaleTimeString:toLocaleDateString에 년월일까지 표시
+   		document.getElementById("d5").innerHTML=today.toLocaleTimeString(); 
+   		
+   		 //toLocaleString
+   		document.getElementById("d6").innerHTML=today.toLocaleString();  
+    	document.getElementById("d7").innerHTML=today.toString();  
+   	 	document.getElementById("d8").innerHTML=today.toTimeString();
+
+	</script>
+</body>
+</html>
+
+<!--testContent: 웹문서 안에서 아이드를 찾아서 변수방에 부여한 후 변수의 내용을 출력
+단 선언된 아이디 순서대로 호출됨-->

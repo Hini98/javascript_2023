@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>obj</title>
+</head>
+<body>
+	<p id="d1"></p>
+    <p id="d2"></p>
+    <p id="d3"></p>
+    <p id="d4"></p>
+	
+	<script>
+		//시간 표기
+		//기본생성자
+		document.getElementById("d1").innerHTML=new Date();
+		//1970,01.01
+		document.getElementById("d2").innerHTML=new Date(1491803527400);
+		//문자열 날짜
+		document.getElementById("d3").innerHTML=new Date("March 16, 2023, 11:15:07");
+		//날짜 지정(월은 01,02 식으로 표기)
+		document.getElementById("d4").innerHTML=new Date(2023, 09, 16, 13, 13, 10);
+
+	</script>
+</body>
+</html>
+
+<!--testContent: 웹문서 안에서 아이드를 찾아서 변수방에 부여한 후 변수의 내용을 출력
+단 선언된 아이디 순서대로 호출됨-->

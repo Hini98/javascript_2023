@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta charset="UTF-8">
+   <title>object</title>
+</head>
+
+<body>
+
+   <p>[Hong Car]</p>
+   <p id="hongcarname"></p>
+   <p id="hongcarcolor"></p>
+   <p id="hongspeed"></p>
+   <p>[Kim Car]</p>
+   <p id="kimcarname"></p>
+   <p id="kimcarcolor"></p>
+   <p id="kimspeed"></p>
+
+   <script>
+      function Car(name, color, speed) {
+         this.name = name;
+         this.color = color;
+         this.speed = speed;
+
+         this.speedUp = function (a) {
+            var sp = this.speed + a;
+            if (sp >= 180) {
+               sp = 50;
+               return sp;
+            } else {
+               return sp;
+            }
+         };
+
+         this.speedDown = function (a) {
+            var sp = this.speed - a;
+            if (sp < 0) {
+               sp = 0;
+               return sp;
+            } else {
+               return sp;
+            }
+         };
+      }
+
+      var Hongcar = new Car('Sonata', 'blue', 100);
+      var Kimcar = new Car('Jeep', 'red', 120);
+
+      var hongcarname = document.getElementById("hongcarname");
+      hongcarname.textContent = '자동차 이름 : ' + Hongcar.name;
+
+      var hongcarcolor = document.getElementById("hongcarcolor");
+      hongcarcolor.textContent = '자동차 색상 : ' + Hongcar.color;
+
+      var hongspeed = document.getElementById("hongspeed");
+      hongspeed.textContent = "속도 : " + Hongcar.speed;
+
+      var kimcarname = document.getElementById("kimcarname");
+      kimcarname.textContent = '자동차 이름 : ' + Kimcar.name;
+
+      var kimcarcolor = document.getElementById("kimcarcolor");
+      kimcarcolor.textContent = '자동차 색상 : ' + Kimcar.color;
+
+      var kimspeed = document.getElementById("kimspeed");
+      kimspeed.textContent = "속도 : " + Kimcar.speed;
+   </script>
+
+</body>
+
+</html>

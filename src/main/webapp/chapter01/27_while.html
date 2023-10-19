@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>charset</title>
+</head>
+<body>
+	<script>
+		var x=0;	//전역변수(데이터영역)
+        var sum=0;
+  
+		while(1){
+			if(x % 3 == 0){
+				sum += x;
+			}
+			if(x == 100) break;
+			x++;
+		}
+			
+		
+		document.write("<p/>")
+		document.write("1~100까지 수 중 3의 배수의 합 : <b>" + sum + "</b><p/>");
+       
+        
+	</script>
+
+</body>
+</html>
